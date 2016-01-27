@@ -3,6 +3,7 @@ get '/' do
   erb :index
 end
 
+#<<<<<<< HEAD
 get '/books' do
   @books = Book.all
   erb :'books/index'
@@ -32,3 +33,9 @@ get '/logout' do
   session.delete(:user_id)
   redirect '/'
 end
+#=======
+get '/login' do
+  erb :login
+end
+
+#>>>>>>> origin/rough-copy
