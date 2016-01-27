@@ -19,3 +19,17 @@ ActiveRecord::Schema.define(version: 20160127185200) do
   end
 
 end
+
+ActiveRecord::Schema.define(version: 20160127191916) do
+
+  create_table "{:table_name=>:books}", force: :cascade do |t|
+    t.string   "title"
+    t.string   "author"
+    t.string   "comment"
+    t.string   "genre"
+    t.integer  "rating"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+end
+

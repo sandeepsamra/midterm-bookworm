@@ -1,0 +1,30 @@
+<div class="nav">
+    <div class="pull-right">
+      <div class="button">
+        <a href="/logout" class="btn btn-default" role="button">Logout</a>
+      </div>
+    </div>
+    <div class="pull left">
+      <li><h1>Bookworm</h1></li>
+    </div>
+</div>
+
+<h2>Add a book you would like to read!</h2>
+<hr/>
+<form method="post" action="/books">
+  <div>
+    <label>Title</label>
+    <input type="text" name="title">
+  </div>
+  <div>
+    <label>Author</label>
+    <input type="text" name="author">
+  </div>
+  <div>
+    <label>Genre</label>
+    <input type="text" name="genre">
+  </div>
+  <div>
+    <input type="submit" value="Submit">
+  </div>
+</form>
