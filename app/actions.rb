@@ -1,3 +1,4 @@
+require 'pry'
 helpers do
   def check_user
     session.delete(:login_error)
@@ -63,13 +64,14 @@ post '/books' do
   end 
 end
 
-get '/books/done_reading' do
-  erb :'books/done_reading'
+post "/books/remove" do
+  book = Book.find(params[:book_id])
+  book.destroy
+  redirect '/books/to_read'
 end
 
-post '/books/remove' do
-  #figure out how to remove book
- redirect 'books/to_read'
+get '/books/done_reading' do
+  erb :'books/done_reading'
 end
 
 post '/books/done' do
@@ -80,7 +82,6 @@ post '/books/done' do
 
   redirect 'books/to_read'
 end
-
 
 get '/logout' do
   session.delete(:user_id)
