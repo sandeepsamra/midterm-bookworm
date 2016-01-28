@@ -37,21 +37,25 @@ post '/validate' do
 end
 
 get '/books' do
+  check_user
   @books = Book.all
   erb :'books/index'
 end
 
 #Add a book
 get '/books/new' do
+  check_user
   erb :'books/new'
 end
 
 get '/books/to_read' do
+  check_user
   @books = Book.all
   erb :'books/to_read'
 end
 
 get '/books/done_reading' do
+  check_user
   @books = Book.all
   erb :'books/done_reading'
 end
@@ -82,20 +86,20 @@ post "/books/done" do
   redirect '/books/to_read'
 end
 
+post '/books/comment' do
+  book = Book.find(params[:book_id])
+  book.comment = params[:comment]
+  book.save
+  redirect 'books/done_reading'
+end
+
 get '/books/done_reading' do
+  check_user
   erb :'books/done_reading'
 end
 
-post '/books/done' do
-  #figure out how to move book to done reading list
-  #loop in to_read will only show books with done_reading value as false
-  #clicking on button will change value to true so that book doesn't show on page anymore
-  #then show all books with value true on done_reading page
-
-  redirect 'books/to_read'
-end
-
 get '/logout' do
+  check_user
   session.delete(:user_id)
   redirect '/'
 end

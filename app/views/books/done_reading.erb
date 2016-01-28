@@ -16,17 +16,22 @@
 
     <% @books.each do |book| %>
       <% if book.done_reading == true %>
-        <h3><%= book.title %><small>(by: <%= book.author %>)</small></h3>
-        <p>
-          <%= book.genre %>
-        </p>
-        <form method="post" action="/books/remove">
-          <input type="hidden" name="book_id" value="<%= book.id %>">
-          <button type="submit" class="btn btn-default">remove from book list</button>
+        <h3><%= book.title %><small> (by: <%= book.author %>)</small></h3>
+        <p>Genre: <%= book.genre %></p>
+        <p>Comments: <%= book.comment %> </p>
+
+        <form action="/books/comment" method="POST">
+          <div class="form-group">
+            <label>Comment:</label>
+            <input type="text" name="comment">
+          </div>
+
+          <div>
+            <input type="hidden" name="book_id" value="<%= book.id %>" />
+            <button type="submit" class="btn btn-default">Add Comment</button>
+          </div>
         </form>
-        <form method="post" action="/books/done">
-          <button type="submit" class="btn btn-default">done reading</button>
-        </form>
+
       <% end %>
     <% end %>
 
