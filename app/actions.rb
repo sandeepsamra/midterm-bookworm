@@ -1,5 +1,3 @@
-NEW TEST 
-
 helpers do
   def check_user
     session.delete(:login_error)
@@ -14,8 +12,6 @@ end
 get '/' do
   erb :index
 end
-
-#test
 
 get '/newuser' do
   erb :newuser
@@ -46,7 +42,6 @@ end
 
 #Add a book
 get '/books/new' do
-  @book = Book.new
   erb :'books/new'
 end
 
@@ -57,7 +52,7 @@ post '/books' do
     genre:  params[:genre]
   )
   if @book.save
-    redirect '/books'
+    redirect '/books/new'
   else
     erb :'books/new'
   end 
