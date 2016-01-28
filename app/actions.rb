@@ -1,3 +1,5 @@
+NEW TEST 
+
 helpers do
   def check_user
     session.delete(:login_error)
