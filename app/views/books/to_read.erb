@@ -23,7 +23,12 @@
 			<%= book.genre %>
 		</p>
 			<form method="post" action="/books/remove">
+				<input type="hidden" name="book_id" value="<%= book.id %>">
 			  <button type="submit" class="btn btn-default">remove from book list</button>
+			</form>
+
+			<form method="post" action="/books/done">
+				<button type="submit" class="btn btn-default">done reading</button>
 			</form>
 
       <form method="post" action="/books/done">
