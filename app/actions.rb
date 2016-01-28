@@ -51,6 +51,11 @@ get '/books/to_read' do
   erb :'books/to_read'
 end
 
+get '/books/done_reading' do
+  @books = Book.all
+  erb :'books/done_reading'
+end
+
 post '/books' do
   @book = Book.new(
     author: params[:author],
@@ -67,6 +72,13 @@ end
 post "/books/remove" do
   book = Book.find(params[:book_id])
   book.destroy
+  redirect '/books/to_read'
+end
+
+post "/books/done" do
+  book = Book.find(params[:book_id])
+  book.done_reading = true
+  book.save
   redirect '/books/to_read'
 end
 

@@ -5,32 +5,38 @@
   		</div>
   	</div>
   	<div class="pull left">
-  		<li><h1>Bookworm</h1></li>
+  		<h1>Bookworm</h1>
 		</div>
 </div>
 
-<div class="button">
-   <a href="/books/new" class="btn btn-default" role="button">Add a book to read.<a>
-   </div>
+<br/>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="button">
+       <a href="/books/new" class="btn btn-default" role="button">Add a book to read.</a>
+       </div>
+    </div>
+
+    <h2> Books I want to read </h2>
+   
+    <% @books.each do |book| %>
+      <% if book.done_reading == false %>
+        <h3><%= book.title %><small>(by: <%= book.author %>)</small></h3>
+      	<p>
+      		<%= book.genre %>
+      	</p>
+    		<form method="post" action="/books/remove">
+    			<input type="hidden" name="book_id" value="<%= book.id %>">
+    		  <button type="submit" class="btn btn-default">remove from book list</button>
+    		</form>
+    		<form method="post" action="/books/done">
+          <input type="hidden" name="book_id" value="<%= book.id %>">
+    			<button type="submit" class="btn btn-default">done reading</button>
+    		</form>
+      <% end %>
+    <% end %>
+
+  </div>
 </div>
-
-<h2> Books I want to read </h2>
-
-<% @books.each do |book| %>
-	<div class="book_list">
-		<h3><%= book.title %><small>(by: <%= book.author %>)</small></h3>
-		<p>
-			<%= book.genre %>
-		</p>
-			<form method="post" action="/books/remove">
-				<input type="hidden" name="book_id" value="<%= book.id %>">
-			  <button type="submit" class="btn btn-default">remove from book list</button>
-			</form>
-
-			<form method="post" action="/books/done">
-				<button type="submit" class="btn btn-default">done reading</button>
-			</form>
-
-	</div>
-<% end %>
-
