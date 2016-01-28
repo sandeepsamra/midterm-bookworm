@@ -1,5 +1,3 @@
-NEW TEST 
-
 helpers do
   def check_user
     session.delete(:login_error)
@@ -10,8 +8,6 @@ helpers do
     end
   end
 end
-
-#this is a test
 
 get '/' do
   erb :index
