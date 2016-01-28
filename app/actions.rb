@@ -13,6 +13,8 @@ get '/' do
   erb :index
 end
 
+#test
+
 get '/newuser' do
   erb :newuser
 end
