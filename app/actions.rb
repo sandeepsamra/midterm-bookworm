@@ -52,7 +52,7 @@ end
 
 post '/books' do
   @book = Book.new(
-    author:   params[:author],
+    author: params[:author],
     title: params[:title],
     genre:  params[:genre]
   )
@@ -74,6 +74,10 @@ end
 
 post '/books/done' do
   #figure out how to move book to done reading list
+  #loop in to_read will only show books with done_reading value as false
+  #clicking on button will change value to true so that book doesn't show on page anymore
+  #then show all books with value true on done_reading page
+
   redirect 'books/to_read'
 end
 

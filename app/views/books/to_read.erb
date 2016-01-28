@@ -23,12 +23,13 @@
 			<%= book.genre %>
 		</p>
 			<form method="post" action="/books/remove">
-			  <button type="submit" class="btn btn-default">remove from book list</button>
+			  <button type="delete" class="btn btn-default">remove from book list</button>
 			</form>
 
       <form method="post" action="/books/done">
         <button type="submit" class="btn btn-default">add to done reading list</button>
       </form>
+
 	</div>
 <% end %>
 
