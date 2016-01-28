@@ -1,4 +1,4 @@
-this is a test 
+NEW TEST 
 
 helpers do
   def check_user
