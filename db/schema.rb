@@ -11,18 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160127185200) do
+ActiveRecord::Schema.define(version: 20160127214538) do
 
-  create_table "users", force: :cascade do |t|
-    t.string "email"
-    t.string "password"
-  end
-
-end
-
-ActiveRecord::Schema.define(version: 20160127191916) do
-
-  create_table "{:table_name=>:books}", force: :cascade do |t|
+  create_table "books", force: :cascade do |t|
     t.string   "title"
     t.string   "author"
     t.string   "comment"
@@ -30,6 +21,12 @@ ActiveRecord::Schema.define(version: 20160127191916) do
     t.integer  "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "done_reading", default: false
   end
-end
 
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password"
+  end
+
+end
