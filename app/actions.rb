@@ -3,10 +3,6 @@ get '/' do
   erb :index
 end
 
-get '/login' do
-  erb :login
-end
-
 get '/books' do
   @books = Book.all
   erb :'books/index'
