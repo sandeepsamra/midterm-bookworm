@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  background-color: #d2dfdf;
+  padding: 5px;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.link {
+  margin-left: 10px;
+}
+
+.button {
+  margin-left: 2px;
+}
+
+.row {
+  padding: 5px;
+  padding-right: 5px;
+}
+
+h1 {
+  margin-left: 10px;
+}
+
+h4 {
+  margin-left: 10px;
+}
+
+p {
+  margin-left: 20px;
+}
