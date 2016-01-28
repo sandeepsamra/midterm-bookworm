@@ -9,8 +9,6 @@ helpers do
   end
 end
 
-#this is a test
-
 get '/' do
   erb :index
 end
