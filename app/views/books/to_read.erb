@@ -1,6 +1,7 @@
 <div class="nav">
   	<div class="pull-right">
-  		<div class="button">
+      <div class="button">
+        <a href="/books/done_reading" class="btn btn-default" role="button">Done reading list.</a>
   			<a href="/logout" class="btn btn-default" role="button">Logout</a>
   		</div>
   	</div>
@@ -16,7 +17,6 @@
 
     <div class="button">
        <a href="/books/new" class="btn btn-default" role="button">Add a book to read.</a>
-       </div>
     </div>
 
     <h2> Books I want to read </h2>
@@ -33,7 +33,7 @@
     		</form>
     		<form method="post" action="/books/done">
           <input type="hidden" name="book_id" value="<%= book.id %>">
-    			<button type="submit" class="btn btn-default">done reading</button>
+    			<button type="submit" class="btn btn-default">add to done reading</button>
     		</form>
       <% end %>
     <% end %>
