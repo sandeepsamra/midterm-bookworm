@@ -1,4 +1,4 @@
-this is a test
+this is a test 
 
 helpers do
   def check_user
@@ -14,6 +14,8 @@ end
 get '/' do
   erb :index
 end
+
+#test
 
 get '/newuser' do
   erb :newuser
