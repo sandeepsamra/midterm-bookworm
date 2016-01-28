@@ -1,11 +1,37 @@
-<div class="row">
-  <div class="col-*-*">header/logo goes here</div>
-</div>
-<div class="row">
-  <div class="col-*-*">
-    <!-- login form + login and signup button go here -->
+<div class="container-fluid">
+  <div class="row">
+    <h1 align="center">header/logo goes here</h1>
   </div>
-  <div class="col-*-*">
-    <!-- bookworm info goes here -->
+</div>
+
+<br/>
+
+<div class="container-fluid" align ="center">
+  <div class="row">
+    <div class="col-sm-5">
+      <!-- bookworm info goes here -->
+      STUFF
+    </div>
+    <div class="col-sm-5">
+      <!-- login form + login and signup button go here -->
+
+      <form action="/validate" method="POST">
+        <div class="form-group">
+          <label>Email:</label>
+          <input type="text" name="email">
+        </div>
+        <div class="form-group">
+          <label>Password:</label>
+          <input type="password" name="password">
+        </div>
+        <br/>
+        <div>
+          <button type="submit" class="btn btn-default" align="left">Login</button>
+          <a href="/newuser" class="btn btn-default" role="button" align "right">Sign Up</a>
+        </div>        
+
+      </form>
+
+    </div>
   </div>
 </div>
