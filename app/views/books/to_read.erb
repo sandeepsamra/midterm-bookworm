@@ -9,9 +9,16 @@
 		</div>
 </div>
 
+<div class="button">
+   <a href="/books/new" class="btn btn-default" role="button">Add a book to read.<a>
+   </div>
+</div>
+
+<h2> Books I want to read </h2>
+
 <% @books.each do |book| %>
 	<div class="book_list">
-		<h1><%= book.title %><small>(by: <%= book.author %>)</small></h1>
+		<h3><%= book.title %><small>(by: <%= book.author %>)</small></h3>
 		<p>
 			<%= book.genre %>
 		</p>
@@ -20,8 +27,5 @@
 			  <button type="submit" class="btn btn-default">done reading</button>
 			</form>
 	</div>
-	 <div class="button">
-    <a href="/books/new" class="btn btn-default" role="button">Add a book to read.<a>
-    </div>
-  </div>
 <% end %>
+
