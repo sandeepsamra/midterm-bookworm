@@ -9,6 +9,8 @@ helpers do
   end
 end
 
+#this is a test
+
 get '/' do
   erb :index
 end
@@ -45,6 +47,11 @@ get '/books/new' do
   erb :'books/new'
 end
 
+get '/books/to_read' do
+  @books = Book.all
+  erb :'books/to_read'
+end
+
 post '/books' do
   @book = Book.new(
     author:   params[:author],
@@ -52,7 +59,7 @@ post '/books' do
     genre:  params[:genre]
   )
   if @book.save
-    redirect '/books/new'
+    redirect '/books/to_read'
   else
     erb :'books/new'
   end 
