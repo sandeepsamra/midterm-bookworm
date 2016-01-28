@@ -5,20 +5,30 @@
       </div>
     </div>
     <div class="pull left">
-      <li><h1>Bookworm</h1></li>
+      <h1>Bookworm</h1>
     </div>
 </div>
 
 <br/>
 
-<div class="container-fluid" align="center">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-sm-5">
-      <!-- STUFF -->
-      STUFF
-    </div>
-    <div class="col-sm-5">
-      <!-- done reading list will go here -->
-    </div>
+
+    <% @books.each do |book| %>
+      <% if book.done_reading == true %>
+        <h3><%= book.title %><small>(by: <%= book.author %>)</small></h3>
+        <p>
+          <%= book.genre %>
+        </p>
+        <form method="post" action="/books/remove">
+          <input type="hidden" name="book_id" value="<%= book.id %>">
+          <button type="submit" class="btn btn-default">remove from book list</button>
+        </form>
+        <form method="post" action="/books/done">
+          <button type="submit" class="btn btn-default">done reading</button>
+        </form>
+      <% end %>
+    <% end %>
+
   </div>
 </div>
