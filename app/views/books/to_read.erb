@@ -28,7 +28,7 @@
       </div>
    
       <% @books.each do |book| %>
-        <% if book.done_reading == false %>
+        <% if (book.done_reading == false) && (book.user_id == current_user) %>
           <h3><%= book.title %><small>(by: <%= book.author %>)</small></h3>
         	<p>
         		<%= book.genre %>

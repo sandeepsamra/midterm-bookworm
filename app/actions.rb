@@ -8,6 +8,10 @@ helpers do
       redirect '/'
     end
   end
+
+  def current_user
+    @current_user = User.find_by(id: session[:user_id])
+  end
 end
 
 get '/' do
@@ -64,7 +68,8 @@ post '/books' do
   @book = Book.new(
     author: params[:author],
     title: params[:title],
-    genre:  params[:genre]
+    genre:  params[:genre],
+    user_id: @current_user.id
   )
   if @book.save
     redirect '/books/to_read'
