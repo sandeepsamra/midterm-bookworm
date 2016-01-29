@@ -7,19 +7,29 @@
 
   <div class="col-sm-4">
     <h2>Add a book you would like to read!</h2>
+    <br>
     <form method="post" action="/books">
       <div>
         <label>Title</label>
         <input type="text" name="title">
       </div>
+      <br>
       <div>
         <label>Author</label>
         <input type="text" name="author">
       </div>
+      <br>
       <div>
         <label>Genre</label>
         <input type="text" name="genre">
       </div>
+      <br>
+      <div class="control-group">
+      <!-- book's image -->
+      <input class="form-control" id="book_image" 
+             name="book_image" type="file" required="required">
+      </div>
+      <br>
       <div>
         <input type="submit" value="Submit">
       </div>
