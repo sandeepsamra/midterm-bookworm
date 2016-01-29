@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160129192349) do
+ActiveRecord::Schema.define(version: 20160129214911) do
 
   create_table "books", force: :cascade do |t|
     t.string   "title"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20160129192349) do
     t.datetime "updated_at"
     t.boolean  "done_reading", default: false
     t.integer  "user_id"
+    t.binary   "photos"
   end
 
   create_table "users", force: :cascade do |t|

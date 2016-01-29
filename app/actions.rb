@@ -73,11 +73,14 @@ post '/books' do
     author: params[:author],
     title: params[:title],
     genre:  params[:genre],
-    user_id: current_user.id
+    user_id: current_user.id,
+    photos: params[:book_image][:tempfile].read
   )
-  #File.open('uploads/'+params[:book_image][:filename], "wb") do |new_file| 
-    #new_file.write(params[:book_image][:tempfile].read)
-  #end
+
+  File.open('uploads/'+params[:book_image][:filename], "wb") do |new_file| 
+  new_file.write(params[:book_image][:tempfile].read)
+  end
+
   if @book.save
     redirect '/books/to_read'
   else
