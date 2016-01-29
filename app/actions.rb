@@ -10,7 +10,7 @@ helpers do
   end
 
   def current_user
-    @current_user = User.find_by(id: session[:user_id])
+    User.find_by(id: session[:user_id])
   end
 end
 
@@ -69,7 +69,7 @@ post '/books' do
     author: params[:author],
     title: params[:title],
     genre:  params[:genre],
-    #user_id: @current_user.id
+    user_id: current_user.id
   )
   if @book.save
     redirect '/books/to_read'
