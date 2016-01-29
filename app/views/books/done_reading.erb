@@ -20,7 +20,7 @@
 
     <div class="col-sm-4">
       <% @books.each do |book| %>
-        <% if book.done_reading == true #&& (book.user_id == current_user) %>
+        <% if (book.done_reading == true) && (book.user_id == current_user.id) %>
           <h3><%= book.title %><small> (by: <%= book.author %>)</small></h3>
           <p>Genre: <%= book.genre %></p>
           <p>Comments: <%= book.comment %> </p>
