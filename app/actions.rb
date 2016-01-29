@@ -13,7 +13,7 @@ helpers do
   end
 
   def user_name
-    User.find_by(id: session[:user_id]).email
+    User.find_by(id: session[:user_id]).name
   end
 
 end
@@ -76,9 +76,11 @@ post '/books' do
     user_id: current_user.id,
     photos: params[:book_image][:tempfile].read
   )
+
   File.open('uploads/'+params[:book_image][:filename], "wb") do |new_file| 
   new_file.write(params[:book_image][:tempfile].read)
   end
+
   if @book.save
     redirect '/books/to_read'
   else
