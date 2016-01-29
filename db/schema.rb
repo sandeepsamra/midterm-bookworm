@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20160129214911) do
     t.datetime "updated_at"
     t.boolean  "done_reading", default: false
     t.integer  "user_id"
-    t.binary   "photos"
+    t.string   "photo"
   end
 
   create_table "users", force: :cascade do |t|
