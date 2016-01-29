@@ -9,21 +9,29 @@
     </div>
 </div>
 
-<h2>Add a book you would like to read!</h2>
-<form method="post" action="/books">
-  <div>
-    <label>Title</label>
-    <input type="text" name="title">
+<div class="row">
+  <div class="col-sm-4">
+
   </div>
-  <div>
-    <label>Author</label>
-    <input type="text" name="author">
+
+  <div class="col-sm-4">
+    <h2>Add a book you would like to read!</h2>
+    <form method="post" action="/books">
+      <div>
+        <label>Title</label>
+        <input type="text" name="title">
+      </div>
+      <div>
+        <label>Author</label>
+        <input type="text" name="author">
+      </div>
+      <div>
+        <label>Genre</label>
+        <input type="text" name="genre">
+      </div>
+      <div>
+        <input type="submit" value="Submit">
+      </div>
+    </form>
   </div>
-  <div>
-    <label>Genre</label>
-    <input type="text" name="genre">
-  </div>
-  <div>
-    <input type="submit" value="Submit">
-  </div>
-</form>
+</div>

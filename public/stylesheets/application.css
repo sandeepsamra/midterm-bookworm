@@ -11,6 +11,21 @@ body {
   padding-bottom: 15px;
 }
 
+.jumbotron {
+
+  background-image: url('http://gregdenning.com/wp-content/uploads/2014/10/Stack-of-books-great-education.jpg');
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron h1 {
+  color: white;
+  font-size: 140px;
+  margin-top: 70px;
+  font-family: 'Dancing Script', cursive;
+}
+
 .link {
   margin-left: 10px;
 }

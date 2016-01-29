@@ -14,26 +14,30 @@
 <div class="container-fluid">
   <div class="row">
 
-    <% @books.each do |book| %>
-      <% if book.done_reading == true %>
-        <h3><%= book.title %><small> (by: <%= book.author %>)</small></h3>
-        <p>Genre: <%= book.genre %></p>
-        <p>Comments: <%= book.comment %> </p>
+    <div class="col-sm-4">
+      STUFF
+    </div>
 
-        <form action="/books/comment" method="POST">
-          <div class="form-group">
-            <label>Comment:</label>
-            <input type="text" name="comment">
-          </div>
+    <div class="col-sm-4">
+      <% @books.each do |book| %>
+        <% if book.done_reading == true %>
+          <h3><%= book.title %><small> (by: <%= book.author %>)</small></h3>
+          <p>Genre: <%= book.genre %></p>
+          <p>Comments: <%= book.comment %> </p>
 
-          <div>
-            <input type="hidden" name="book_id" value="<%= book.id %>" />
-            <button type="submit" class="btn btn-default">Add Comment</button>
-          </div>
-        </form>
+          <form action="/books/comment" method="POST">
+            <div class="form-group">
+              <label>Comment:</label>
+              <input type="text" name="comment">
 
+              <input type="hidden" name="book_id" value="<%= book.id %>" />
+              <button type="submit" class="btn btn-default">Add Comment</button>
+            </div>
+          </form>
+
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
 
   </div>
 </div>
