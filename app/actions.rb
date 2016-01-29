@@ -11,6 +11,11 @@ helpers do
   def current_user
     User.find_by(id: session[:user_id])
   end
+
+  def user_name
+    User.find_by(id: session[:user_id]).email
+  end
+
 end
 
 get '/' do
