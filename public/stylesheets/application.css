@@ -11,6 +11,12 @@ body {
   padding-bottom: 15px;
 }
 
+.navbar-brand {
+  color: white;
+  font-size: 50px;
+  font-family: 'Dancing Script', cursive;
+}
+
 .jumbotron {
 
   background-image: url('http://gregdenning.com/wp-content/uploads/2014/10/Stack-of-books-great-education.jpg');

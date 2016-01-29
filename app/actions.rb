@@ -1,4 +1,3 @@
-require 'pry'
 helpers do
   def check_user
     session.delete(:login_error)
@@ -97,7 +96,6 @@ post '/books/comment' do
   book.save
   redirect 'books/done_reading'
 end
-
 
 get '/books/done_reading' do
   check_user
