@@ -17,14 +17,12 @@
    
       <% @books.each do |book| %>
         <% if (book.done_reading == false) && (book.user_id == current_user.id) %>
-          <h3><%= book.title %><small>(by: <%= book.author %>)</small></h3>
+          <h3><%= book.title %><small> (by: <%= book.author %>)</small></h3>
         	<p>
-        		<%= book.genre %>
+        		Genre: <%= book.genre %>
         	</p>
 
-          <p>
-            <%= book.photos %>
-          </p>  
+          <img src="/uploads/<%= book.photo %>"/>
 
       		<form method="post" action="/books/remove">
       			<input type="hidden" name="book_id" value="<%= book.id %>">

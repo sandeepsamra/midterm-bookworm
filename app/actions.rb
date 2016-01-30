@@ -74,11 +74,11 @@ post '/books' do
     title: params[:title],
     genre:  params[:genre],
     user_id: current_user.id,
-    photos: params[:book_image][:tempfile].read
+    photo: params[:photo][:filename]
   )
 
-  File.open('uploads/'+params[:book_image][:filename], "wb") do |new_file| 
-  new_file.write(params[:book_image][:tempfile].read)
+  File.open('public/uploads/'+params[:photo][:filename], "wb") do |new_file| 
+  new_file.write(params[:photo][:tempfile].read)
   end
 
   if @book.save
