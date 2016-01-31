@@ -2,19 +2,17 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-3" id="to-read-left">
-      <img src="flyingbooks.jpg"/>
+    <div class="col-sm-4" id="to-read-left">
+      <img src="/flyingbooks.jpg"/>
     </div>
 
-    <div class="col-sm-6" id="to-read-right">
+    <div class="col-sm-8" id="to-read-right">
       <div id="book-float">
         <p id="to-read-header"> Books I want to read </p> </div>
         <div>&nbsp;&nbsp;<a href="/books/new" class="btn btn-default" role="button">Add book</a>
-      </div>
+      </div><hr>
 <!-- each book starts -->
       <div>
-        <br/>
-        <br/>
         <% @books.each do |book| %>
           <% if (book.done_reading == false) && (book.user_id == current_user.id) %>
             <div id="book-image"><img id="book-image" src="/uploads/<%= book.photo %>"/></div>

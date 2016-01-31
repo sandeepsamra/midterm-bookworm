@@ -3,17 +3,16 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-3" id="to-read-left">
-      <img src="flyingbooks.jpg"/>
+      <img src="/flyingbooks.jpg"/>
     </div>
 
     <div class="col-sm-6" id="to-read-right">
       <div id="book-float">
         <p id="to-read-header"> Done Reading </p>
-      </div><br/>
+      </div><br/><br/><hr>
 <!-- each book starts -->
       <div>
-        <br/>
-        <br/>
+
         <% @books.each do |book| %>
           <% if (book.done_reading == false) && (book.user_id == current_user.id) %>
             <div id="done-reading-book-image"><img id="book-image" src="/uploads/<%= book.photo %>"/></div>
