@@ -3,12 +3,27 @@ body {
   padding: 0;
 }
 
+#book-float {
+  float: left;
+}
+
+#book-image {
+  width: 65px;
+  height: 100px;
+  float: left;
+}
+
 #header {
   background-color: #d2dfdf;
   padding: 5px;
   width: 100%;
   padding-top: 5px;
   padding-bottom: 15px;
+}
+
+#link-float {
+  float: left;
+  margin-left: 20px;
 }
 
 #login {
@@ -26,6 +41,33 @@ body {
 #signup-left {
   margin-top: 85px;
   font-size: 18px;
+}
+
+#to-read-left {
+  position: fixed;
+  margin-top: 200px;
+  width: 100%;
+  margin-left: 50px;
+}
+
+#to-read-right {
+  margin-top: 80px;
+  margin-left: 500px;
+  position: relative;
+}
+
+#to-read-header {
+  font-size: 30px;
+  margin-left: 2px;
+}
+
+#to-read-info {
+  margin-left: 90px;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
 }
 
 .navbar-brand {
