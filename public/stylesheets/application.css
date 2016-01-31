@@ -130,8 +130,8 @@ div.clickable {
 
 div.clickable img {
   border-radius: 20px;
-  height: 315px;
-  width: 395px;
+  height: 215px;
+  width: 295px;
   transition: transform 0.2s;
 }
 
