@@ -1,38 +1,37 @@
 <%= partial(:'books/_nav_bar', :template_engine => :erb) %>
-
+<body background="/books_new_form.jpg"/>
 <div class="row">
   <div class="col-sm-4">
-
   </div>
-
-  <div class="col-sm-4">
-    <h2>add to your reading list</h2>
-    <br>
-    <form method="post" action="/books" enctype="multipart/form-data">
-      <div>
-        <label>Title</label>
-        <input type="text" name="title">
-      </div>
+    <div class="col-sm-4">
+      <h2 id="form_h2">add to your reading list</h2>
       <br>
-      <div>
-        <label>Author</label>
-        <input type="text" name="author">
-      </div>
-      <br>
-      <div>
-        <label>Genre</label>
-        <input type="text" name="genre">
-      </div>
-      <br>
-      <div class="control-group">
-      <label>Upload an image of the book cover (optional)</label>
-      <input class="form-control" id="photo" 
+      <form method="post" action="/books" enctype="multipart/form-data" id="add_book">
+        <div>
+          <label id="new_book_form">Title</label>
+          <input type="text" name="title">
+        </div>
+        <br>
+        <div>
+          <label id="new_book_form">Author</label>
+          <input type="text" name="author">
+        </div>
+        <br>
+        <div>
+          <label id="new_book_form">Genre</label>
+          <input type="text" name="genre">
+        </div>
+        <br>
+        <div class="control-group">
+          <label id="new_book_form">Upload an image of the book cover (optional)</label>
+            <input class="form-control" id="photo" 
              name="photo" type="file" required="required">
-      </div>
-      <br>
-      <div>
-        <input type="submit" value="Submit">
-      </div>
-    </form>
+        </div>
+        <br>
+        <div>
+          <input type="submit" value="Submit">
+        </div>
+      </form>
   </div>
 </div>
+</body>
