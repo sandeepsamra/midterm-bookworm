@@ -13,6 +13,22 @@ body {
   float: left;
 }
 
+#comment-format {
+  margin-left: 20px;
+}
+
+#comment-length {
+  width: 400px;
+  word-wrap: break-word;
+}
+
+#done-reading-book-image {
+  width: 65px;
+  height: 100px;
+  float: left;  
+  margin-top: 65px;
+}
+
 #header {
   background-color: #d2dfdf;
   padding: 5px;
@@ -53,11 +69,10 @@ body {
 #to-read-right {
   margin-top: 80px;
   margin-left: 500px;
-  position: relative;
 }
 
 #to-read-header {
-  font-size: 30px;
+  font-size: 28px;
   margin-left: 2px;
 }
 
@@ -65,9 +80,15 @@ body {
   margin-left: 90px;
 }
 
+#done-reading-info {
+  margin-left: 90px;
+  margin-top: 1px; 
+}
+
 .navbar {
   width: 100%;
   position: fixed;
+  z-index: 50;
 }
 
 .navbar-brand {

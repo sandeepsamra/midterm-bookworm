@@ -3,43 +3,38 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-3" id="to-read-left">
-    IMAGE GOES HERE
+      <img src="/flyingbooks.jpg"/>
     </div>
 
     <div class="col-sm-6" id="to-read-right">
       <div id="book-float">
         <p id="to-read-header"> Done Reading </p>
-      </div>
+      </div><br/><br/><hr>
 <!-- each book starts -->
       <div>
-        <br/>
-        <br/>
+
         <% @books.each do |book| %>
           <% if (book.done_reading == false) && (book.user_id == current_user.id) %>
-            <div id="book-image"><img id="book-image" src="/uploads/<%= book.photo %>"/></div>
+            <div id="done-reading-book-image"><img id="book-image" src="/uploads/<%= book.photo %>"/></div>
 
-            <div id="to-read-info">
+            <div id="done-reading-info">
               <h3><%= book.title %><small> (by: <%= book.author %>)</small></h3>
               
               <p>Genre: <%= book.genre %></p>
 
-              <div>
-              <form action="/books/comment" method="POST">
-                <div class="form-group">
+              <p id="comment-length">Comment: <%= book.comment %></p>
+
+              <form id="comment-format" action="/books/comment" method="POST">
                   <label>Comment:</label>
                   <input type="text" name="comment">
-
                   <input type="hidden" name="book_id" value="<%= book.id %>" />
-                  <button type="submit" class="btn btn-default">Add Comment</button>
-                </div>
+                  <button type="submit" class="btn btn-default">Add</button>
               </form>
 
-              <div>
-                <form method="post" action="/books/remove" id="link-float">
-                  <input type="hidden" name="book_id" value="<%= book.id %>">
-                  <a>Remove</a>
-                </form>
-              </div>
+              <form method="post" action="/books/remove" id="link-float">
+                <input type="hidden" name="book_id" value="<%= book.id %>">
+                <a>Remove</a>
+              </form>
 
               <br/>
               <br/>
