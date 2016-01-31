@@ -38,7 +38,7 @@ body {
 }
 
 #home-buttons {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 #link-float {
@@ -165,6 +165,7 @@ h1 {
 
 h3 {
   font-family: sans-serif;
+  margin-top: 90px;
 }
 
 h4 {
