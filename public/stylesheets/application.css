@@ -57,6 +57,24 @@ body {
   margin-left: 2px;
 }
 
+div.clickable {
+  position:relative;
+}
+
+.button2 {
+background-image: url('http://imgur.com/qb15Cmp');
+background-repeat: no-repeat;
+height: 215px;
+width: 295px;
+}
+
+.button3 {
+background-image: url('http://imgur.com/qb15Cmp');
+background-repeat: no-repeat;
+height: 215px;
+width: 295px;
+}
+
 .row {
   padding: 5px;
   padding-right: 5px;
@@ -64,6 +82,10 @@ body {
 
 h1 {
   margin-left: 10px;
+}
+
+h3 {
+  font-family: sans-serif;
 }
 
 h4 {
