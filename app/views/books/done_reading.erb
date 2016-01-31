@@ -14,7 +14,7 @@
       <div>
 
         <% @books.each do |book| %>
-          <% if (book.done_reading == false) && (book.user_id == current_user.id) %>
+          <% if (book.done_reading == true) && (book.user_id == current_user.id) %>
             <div id="done-reading-book-image"><img id="book-image" src="/uploads/<%= book.photo %>"/></div>
 
             <div id="done-reading-info">
@@ -31,11 +31,10 @@
                   <button type="submit" class="btn btn-default">Add</button>
               </form>
 
-              <form method="post" action="/books/remove" id="link-float">
+              <form method="post" action="/books/remove">
                 <input type="hidden" name="book_id" value="<%= book.id %>">
-                <a>Remove</a>
+                <button type="submit" class="btn btn-default">remove from book list</button>
               </form>
-
               <br/>
               <br/>
             </div>
