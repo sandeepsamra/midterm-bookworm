@@ -1,6 +1,11 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Helvetica;
+}
+
+#add_book {
+  margin-top: 20px;  
 }
 
 #book-float {
@@ -29,6 +34,22 @@ body {
   margin-top: 65px;
 }
 
+#done-reading-info {
+  margin-left: 90px;
+  margin-top: 1px; 
+}
+
+#form_h2 {
+  margin-top: 70px;
+  margin-bottom: 0px;
+  color: white;
+}
+
+#form_h3 {
+  margin-top: 90px;
+  margin-left: 30px;
+}
+
 #header {
   background-color: #d2dfdf;
   padding: 5px;
@@ -38,6 +59,16 @@ body {
 }
 
 #home-buttons {
+  margin-top: 50px;
+}
+
+#new_book_form {
+  padding-top: 20px;
+  color: white;
+  font-size: 20px
+}
+
+#new-user-form {
   margin-top: 50px;
 }
 
@@ -84,15 +115,11 @@ body {
   margin-left: 90px;
 }
 
-#done-reading-info {
-  margin-left: 90px;
-  margin-top: 1px; 
-}
-
 .navbar {
   width: 100%;
   position: fixed;
   z-index: 50;
+  border-radius: 0px;
 }
 
 .navbar-brand {
@@ -104,7 +131,7 @@ body {
 .jumbotron {
 
   background-image: url('bookworm-background.jpg');
-  height: 350px;
+  height: 400px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -143,29 +170,12 @@ div.clickable img:hover{
   padding-right: 5px;
 }
 
-#form_h2 {
-  margin-top: 70px;
-  margin-bottom: 0px;
-  color: white;
-}
-
-#add_book {
-  margin-top: 20px;  
-}
-
-#new_book_form {
-  padding-top: 20px;
-  color: white;
-  font-size: 20px
-}
-
 h1 {
   margin-left: 10px;
 }
 
 h3 {
   font-family: sans-serif;
-  margin-top: 90px;
 }
 
 h4 {
@@ -175,3 +185,4 @@ h4 {
 p {
   margin-left: 20px;
 }
+
