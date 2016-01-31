@@ -124,23 +124,35 @@ div.clickable {
   position:relative;
 }
 
-.button2 {
-background-image: url('http://imgur.com/qb15Cmp');
-background-repeat: no-repeat;
-height: 215px;
-width: 295px;
+div.clickable img {
+  border-radius: 20px;
+  height: 215px;
+  width: 295px;
+  transition: transform 0.2s;
 }
 
-.button3 {
-background-image: url('http://imgur.com/qb15Cmp');
-background-repeat: no-repeat;
-height: 215px;
-width: 295px;
+div.clickable img:hover{
+  transform: scale(1.1);
 }
-
 .row {
   padding: 5px;
   padding-right: 5px;
+}
+
+#form_h2 {
+  margin-top: 70px;
+  margin-bottom: 0px;
+  color: white;
+}
+
+#add_book {
+  margin-top: 20px;  
+}
+
+#new_book_form {
+  padding-top: 20px;
+  color: white;
+  font-size: 20px
 }
 
 h1 {
