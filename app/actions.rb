@@ -7,7 +7,7 @@ helpers do
       redirect '/'
     end
   end
-#this is a new branch
+#this is a test 
   def current_user
     User.find_by(id: session[:user_id])
   end
