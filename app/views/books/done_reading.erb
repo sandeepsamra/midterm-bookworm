@@ -2,36 +2,52 @@
 
 <div class="container-fluid">
   <div class="row">
-
-    <div class="col-sm-4">
-      STUFF
+    <div class="col-sm-3" id="to-read-left">
+    IMAGE GOES HERE
     </div>
 
-    <div class="col-sm-4">
-      <% @books.each do |book| %>
-        <% if (book.done_reading == true) && (book.user_id == current_user.id) %>
-          <h3><%= book.title %><small> (by: <%= book.author %>)</small></h3>
-          <p>Genre: <%= book.genre %></p>
-          <p>Comments: <%= book.comment %> </p>
+    <div class="col-sm-6" id="to-read-right">
+      <div id="book-float">
+        <p id="to-read-header"> Done Reading </p>
+      </div>
+<!-- each book starts -->
+      <div>
+        <br/>
+        <br/>
+        <% @books.each do |book| %>
+          <% if (book.done_reading == false) && (book.user_id == current_user.id) %>
+            <div id="book-image"><img id="book-image" src="/uploads/<%= book.photo %>"/></div>
 
-          <form method="post" action="/books/remove">
-            <input type="hidden" name="book_id" value="<%= book.id %>">
-            <button type="submit" class="btn btn-default">remove from book list</button>
-          </form>
+            <div id="to-read-info">
+              <h3><%= book.title %><small> (by: <%= book.author %>)</small></h3>
+              
+              <p>Genre: <%= book.genre %></p>
 
-          <form action="/books/comment" method="POST">
-            <div class="form-group">
-              <label>Comment:</label>
-              <input type="text" name="comment">
+              <div>
+              <form action="/books/comment" method="POST">
+                <div class="form-group">
+                  <label>Comment:</label>
+                  <input type="text" name="comment">
 
-              <input type="hidden" name="book_id" value="<%= book.id %>" />
-              <button type="submit" class="btn btn-default">Add Comment</button>
+                  <input type="hidden" name="book_id" value="<%= book.id %>" />
+                  <button type="submit" class="btn btn-default">Add Comment</button>
+                </div>
+              </form>
+
+              <div>
+                <form method="post" action="/books/remove" id="link-float">
+                  <input type="hidden" name="book_id" value="<%= book.id %>">
+                  <a>Remove</a>
+                </form>
+              </div>
+
+              <br/>
+              <br/>
             </div>
-          </form>
-
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
+<!-- each book ends -->
     </div>
-
   </div>
 </div>
