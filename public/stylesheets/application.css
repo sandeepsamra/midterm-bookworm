@@ -37,6 +37,10 @@ body {
   padding-bottom: 15px;
 }
 
+#home-buttons {
+  margin-top: 100px;
+}
+
 #link-float {
   float: left;
   margin-left: 20px;
