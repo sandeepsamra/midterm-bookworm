@@ -3,6 +3,77 @@ body {
   padding: 0;
 }
 
+.button {
+  margin-left: 2px;
+}
+
+div.clickable {
+  position:relative;
+}
+
+div.clickable img {
+  border-radius: 20px;
+  height: 215px;
+  width: 295px;
+  transition: transform 0.2s;
+}
+
+div.clickable img:hover{
+  transform: scale(1.1);
+}
+
+h1 {
+  margin-left: 10px;
+}
+
+h3 {
+  font-family: sans-serif;
+  margin-top: 90px;
+}
+
+h4 {
+  margin-left: 10px;
+}
+
+p {
+  margin-left: 20px;
+}
+
+.jumbotron {
+
+  background-image: url('bookworm-background.jpg');
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron h1 {
+  color: white;
+  font-size: 140px;
+  margin-top: 50px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.link {
+  margin-left: 10px;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 50;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 50px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.row {
+  padding: 5px;
+  padding-right: 5px;
+}
 #book-float {
   float: left;
 }
@@ -89,60 +160,6 @@ body {
   margin-top: 1px; 
 }
 
-.navbar {
-  width: 100%;
-  position: fixed;
-  z-index: 50;
-}
-
-.navbar-brand {
-  color: white;
-  font-size: 50px;
-  font-family: 'Dancing Script', cursive;
-}
-
-.jumbotron {
-
-  background-image: url('bookworm-background.jpg');
-  height: 350px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.jumbotron h1 {
-  color: white;
-  font-size: 140px;
-  margin-top: 50px;
-  font-family: 'Dancing Script', cursive;
-}
-
-.link {
-  margin-left: 10px;
-}
-
-.button {
-  margin-left: 2px;
-}
-
-div.clickable {
-  position:relative;
-}
-
-div.clickable img {
-  border-radius: 20px;
-  height: 215px;
-  width: 295px;
-  transition: transform 0.2s;
-}
-
-div.clickable img:hover{
-  transform: scale(1.1);
-}
-.row {
-  padding: 5px;
-  padding-right: 5px;
-}
-
 #form_h2 {
   margin-top: 70px;
   margin-bottom: 0px;
@@ -157,21 +174,4 @@ div.clickable img:hover{
   padding-top: 20px;
   color: white;
   font-size: 20px
-}
-
-h1 {
-  margin-left: 10px;
-}
-
-h3 {
-  font-family: sans-serif;
-  margin-top: 90px;
-}
-
-h4 {
-  margin-left: 10px;
-}
-
-p {
-  margin-left: 20px;
 }
