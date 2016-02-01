@@ -9,7 +9,7 @@ require 'sinatra/activerecord'
 require 'sinatra/contrib/all' # Requires cookies, among other things
 require 'sinatra/partial'
 
-require 'pry'
+require 'pry' if development?
 
 require 'bcrypt'
 
