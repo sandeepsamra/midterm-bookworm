@@ -1,150 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Helvetica;
-}
-
-#add_book {
-  margin-top: 20px;  
-}
-
-#book-float {
-  float: left;
-}
-
-#book-image {
-  width: 65px;
-  height: 100px;
-  float: left;
-}
-
-#comment-format {
-  margin-left: 20px;
-}
-
-#comment-length {
-  width: 400px;
-  word-wrap: break-word;
-}
-
-#done-reading-book-image {
-  width: 65px;
-  height: 100px;
-  float: left;  
-  margin-top: 65px;
-}
-
-#done-reading-info {
-  margin-left: 90px;
-  margin-top: 1px; 
-}
-
-#form_h2 {
-  margin-top: 70px;
-  margin-bottom: 0px;
-  color: white;
-}
-
-#form_h3 {
-  margin-top: 90px;
-  margin-left: 30px;
-}
-
-#header {
-  background-color: #d2dfdf;
-  padding: 5px;
-  width: 100%;
-  padding-top: 5px;
-  padding-bottom: 15px;
-}
-
-#home-buttons {
-  margin-top: 50px;
-}
-
-#new_book_form {
-  padding-top: 20px;
-  color: white;
-  font-size: 20px
-}
-
-#new-user-form {
-  margin-top: 50px;
-}
-
-#link-float {
-  float: left;
-  margin-left: 20px;
-}
-
-#login {
-  margin-top: 75px;
-}
-
-#left-login {
-  font-size: 18px;
-}
-
-#signup {
-  margin-top: 30px;
-}
-
-#signup-left {
-  margin-top: 85px;
-  font-size: 18px;
-}
-
-#to-read-left {
-  position: fixed;
-  margin-top: 200px;
-  width: 100%;
-  margin-left: 50px;
-}
-
-#to-read-right {
-  margin-top: 80px;
-  margin-left: 500px;
-}
-
-#to-read-header {
-  font-size: 28px;
-  margin-left: 2px;
-}
-
-#to-read-info {
-  margin-left: 90px;
-}
-
-.navbar {
-  width: 100%;
-  position: fixed;
-  z-index: 50;
-  border-radius: 0px;
-}
-
-.navbar-brand {
-  color: white;
-  font-size: 50px;
-  font-family: 'Dancing Script', cursive;
-}
-
-.jumbotron {
-
-  background-image: url('bookworm-background.jpg');
-  height: 400px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.jumbotron h1 {
-  color: white;
-  font-size: 140px;
-  margin-top: 50px;
-  font-family: 'Dancing Script', cursive;
-}
-
-.link {
-  margin-left: 10px;
 }
 
 .button {
@@ -165,17 +21,14 @@ div.clickable img {
 div.clickable img:hover{
   transform: scale(1.1);
 }
-.row {
-  padding: 5px;
-  padding-right: 5px;
-}
 
 h1 {
   margin-left: 10px;
 }
 
-h3 {
+#form_h3 {
   font-family: sans-serif;
+  margin-top: 90px;
 }
 
 h4 {
@@ -186,3 +39,141 @@ p {
   margin-left: 20px;
 }
 
+.jumbotron {
+
+  background-image: url('bookworm-background.jpg');
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron h1 {
+  color: white;
+  font-size: 140px;
+  margin-top: 50px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.link {
+  margin-left: 10px;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 50;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 50px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.row {
+  padding: 5px;
+  padding-right: 5px;
+}
+
+#add_book {
+  margin-top: 20px;  
+}
+
+#book-float {
+  float: left;
+}
+
+#to-read-book-image {
+  width: 65px;
+  height: 100px;
+  float: left;
+  margin-top: 20px;
+}
+
+#comment-format {
+  margin-left: 20px;
+}
+
+#comment-length {
+  width: 400px;
+  word-wrap: break-word;
+}
+
+#done-reading-book-image {
+  width: 80px;
+  height: 120px;
+  float: left;  
+  margin-top: 50px;
+}
+
+#done-reading-info {
+  margin-left: 110px;
+  margin-top: 50px; 
+}
+
+#form_h2 {
+  margin-top: 90px;
+  margin-bottom: 0px;
+  color: white;
+}
+
+#header {
+  background-color: #d2dfdf;
+  padding: 5px;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+#home-buttons {
+  margin-top: 50px;
+}
+
+#left-login {
+  font-size: 18px;
+}
+
+#link-float {
+  float: left;
+  margin-left: 20px;
+}
+
+#login {
+  margin-top: 75px;
+}
+
+#new_book_form {
+  padding-top: 20px;
+  color: white;
+  font-size: 20px
+}
+
+#signup {
+  margin-top: 30px;
+}
+
+#signup-left {
+  margin-top: 85px;
+  font-size: 18px;
+}
+
+#to-read-header {
+  font-size: 28px;
+  margin-left: 2px;
+}
+
+#to-read-info {
+  margin-left: 90px;
+}
+
+#to-read-left {
+  position: fixed;
+  margin-top: 200px;
+  width: 100%;
+  margin-left: 50px;
+}
+
+#to-read-right {
+  margin-top: 80px;
+  margin-left: 500px;
+}

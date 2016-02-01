@@ -12,10 +12,10 @@
       </div><br/><br/><hr>
 <!-- each book starts -->
       <div>
-
+      <br/>
         <% @books.each do |book| %>
-          <% if (book.done_reading == false) && (book.user_id == current_user.id) %>
-            <div id="done-reading-book-image"><img id="book-image" src="/uploads/<%= book.photo %>"/></div>
+          <% if (book.done_reading == true) && (book.user_id == current_user.id) %>
+            <div><img id="done-reading-book-image" src="/uploads/<%= book.photo %>"/></div>
 
             <div id="done-reading-info">
               <h3><%= book.title %><small> (by: <%= book.author %>)</small></h3>
@@ -33,7 +33,7 @@
 
               <form method="post" action="/books/remove" id="link-float">
                 <input type="hidden" name="book_id" value="<%= book.id %>">
-                <a>Remove</a>
+                <button type="submit" class="btn btn-default">Remove</button>
               </form>
 
               <br/>
