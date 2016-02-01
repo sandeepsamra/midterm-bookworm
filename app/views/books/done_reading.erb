@@ -8,14 +8,14 @@
 
     <div class="col-sm-6" id="to-read-right">
       <div id="book-float">
-        <p id="to-read-header"> Done Reading </p>
+        <p id="to-read-header"> Books I've already read </p>
       </div><br/><br/><hr>
 <!-- each book starts -->
       <div>
-
+      <br/>
         <% @books.each do |book| %>
           <% if (book.done_reading == true) && (book.user_id == current_user.id) %>
-            <div id="done-reading-book-image"><img id="book-image" src="/uploads/<%= book.photo %>"/></div>
+            <div><img id="done-reading-book-image" src="/uploads/<%= book.photo %>"/></div>
 
             <div id="done-reading-info">
               <h3><%= book.title %><small> (by: <%= book.author %>)</small></h3>
@@ -33,7 +33,7 @@
 
               <form method="post" action="/books/remove">
                 <input type="hidden" name="book_id" value="<%= book.id %>">
-                <button type="submit" class="btn btn-default">remove from book list</button>
+                <button type="submit" class="btn btn-default">Remove</button>
               </form>
               <br/>
               <br/>

@@ -26,7 +26,7 @@ h1 {
   margin-left: 10px;
 }
 
-h3 {
+#form_h3 {
   font-family: sans-serif;
   margin-top: 90px;
 }
@@ -74,14 +74,20 @@ p {
   padding: 5px;
   padding-right: 5px;
 }
+
+#add_book {
+  margin-top: 20px;  
+}
+
 #book-float {
   float: left;
 }
 
-#book-image {
+#to-read-book-image {
   width: 65px;
   height: 100px;
   float: left;
+  margin-top: 20px;
 }
 
 #comment-format {
@@ -94,10 +100,21 @@ p {
 }
 
 #done-reading-book-image {
-  width: 65px;
-  height: 100px;
+  width: 80px;
+  height: 120px;
   float: left;  
-  margin-top: 65px;
+  margin-top: 50px;
+}
+
+#done-reading-info {
+  margin-left: 110px;
+  margin-top: 50px; 
+}
+
+#form_h2 {
+  margin-top: 90px;
+  margin-bottom: 0px;
+  color: white;
 }
 
 #header {
@@ -112,6 +129,10 @@ p {
   margin-top: 50px;
 }
 
+#left-login {
+  font-size: 18px;
+}
+
 #link-float {
   float: left;
   margin-left: 20px;
@@ -121,8 +142,10 @@ p {
   margin-top: 75px;
 }
 
-#left-login {
-  font-size: 18px;
+#new_book_form {
+  padding-top: 20px;
+  color: white;
+  font-size: 20px
 }
 
 #signup {
@@ -132,6 +155,15 @@ p {
 #signup-left {
   margin-top: 85px;
   font-size: 18px;
+}
+
+#to-read-header {
+  font-size: 28px;
+  margin-left: 2px;
+}
+
+#to-read-info {
+  margin-left: 90px;
 }
 
 #to-read-left {
@@ -144,34 +176,4 @@ p {
 #to-read-right {
   margin-top: 80px;
   margin-left: 500px;
-}
-
-#to-read-header {
-  font-size: 28px;
-  margin-left: 2px;
-}
-
-#to-read-info {
-  margin-left: 90px;
-}
-
-#done-reading-info {
-  margin-left: 90px;
-  margin-top: 1px; 
-}
-
-#form_h2 {
-  margin-top: 70px;
-  margin-bottom: 0px;
-  color: white;
-}
-
-#add_book {
-  margin-top: 20px;  
-}
-
-#new_book_form {
-  padding-top: 20px;
-  color: white;
-  font-size: 20px
 }
