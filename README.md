@@ -13,6 +13,6 @@ The Future of Bookworm
 
 We were introduced to Sinatra the same week that we started this project. If we had more time, we would have liked to implement the following:
 
-- user interaction
-- a comment model, so that each book can have multiple comments (from the user, as well as from other users)
-- a "Start a Book Club" section so that a user can start a book club discussion about a book, and other users can decide if they want to join
+- user interaction;
+- a comment model, so that each book can have multiple comments (from the user, as well as from other users); and
+- a "Start a Book Club" section so that a user can start a book club discussion about a book, and other users can decide if they want to join.
