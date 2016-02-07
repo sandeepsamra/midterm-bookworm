@@ -1,10 +1,18 @@
-Sinatra
-=============
+Bookworm
+========
 
-Brought to you by Lighthouse Labs
+About Bookworm
+==============
 
-## Getting Started
+Bookworm is a Lighthouse Labs midterm project completed over the span of three days by Sandeep Samra and Natalie Famula.
 
-1. `bundle install`
-2. `shotgun -p 3000 -o 0.0.0.0`
-3. Visit `http://localhost:3000/` in your browser
+Bookworm is an app for managing the books you're reading, and the books you want to read. You can add a book and a cover photo to your list of books you want to read, and once you're done reading you can move it to another list and leave comments that you can look at later. It's ideal for those of you who read so much that you would like to leave comments for yourself, and for those who like to jot down quotes, etc.
+
+The Future of Bookworm
+======================
+
+We were introduced to Sinatra the same week that we started this project. If we had more time, we would have liked to implement the following:
+
+- user interaction
+- a comment model, so that each book can have multiple comments (from the user, as well as from other users)
+- a "Start a Book Club" section so that a user can start a book club discussion about a book, and other users can decide if they want to join
