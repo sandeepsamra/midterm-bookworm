@@ -10,6 +10,10 @@ Bookworm is an app for managing the books you're reading, and the books you want
 
 Deployed with Heroku: http://book-worm-.herokuapp.com/
 
+Test account information:
+login: test@bookworm.com
+password: bookworm
+
 The Future of Bookworm
 ======================
 
